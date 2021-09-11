@@ -9,7 +9,7 @@ class Game {
         this.player = new Player(entryNode);
     }
 
-    play(counter): void {
+    play(counter: number): void {
         for (let index = 0; index < counter; index++) {
             this.player.says(index)
         }
