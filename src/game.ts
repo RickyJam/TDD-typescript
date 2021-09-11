@@ -2,7 +2,7 @@ import Node from './node/Node';
 
 class Game {
 
-    entryNode: Node
+    private entryNode: Node
 
     constructor(entryNode: Node){
         this.entryNode = entryNode
