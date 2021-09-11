@@ -15,4 +15,7 @@ describe('Buzz', () => {
         expect(buzz.check(5)).toBe(true);
     });
 
+    it('checks return true when 10', () => {
+        expect(buzz.check(5)).toBe(true);
+    });
 });
