@@ -3,15 +3,15 @@ import Player from './player/Player';
 
 class Game {
 
-    private entryNode: Node
+    private player: Player
 
     constructor(entryNode: Node){
-        this.entryNode = entryNode
+        this.player = new Player(entryNode);
     }
 
     play(counter): void {
         for (let index = 0; index < counter; index++) {
-            Player.says(index, this.entryNode)
+            this.player.says(index)
         }
     }
 }

@@ -2,8 +2,14 @@ import Node from '../node/Node';
 
 class Player {
 
-    static says(value: number, entryNode: Node): string {
-        return entryNode.apply(value);
+    private entryNode: Node
+
+    constructor(entryNode: Node){
+        this.entryNode = entryNode
+    }
+
+    says(value: number): string {
+        return this.entryNode.apply(value);
     }
 }
 
