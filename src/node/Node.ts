@@ -9,7 +9,7 @@ class Node {
         this.nextNode = nextNode;
     }
 
-    private _evaluateRule(currentValue: number): string {
+    private evaluateRule(currentValue: number): string {
         const {isValid, value} = this.rule.handle(currentValue);
         if(isValid){
             return value;
@@ -18,7 +18,7 @@ class Node {
     }
 
     apply(value: number): string {
-        return this._evaluateRule(value)
+        return this.evaluateRule(value)
     }
 }
 
