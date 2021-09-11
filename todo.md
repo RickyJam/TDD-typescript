@@ -1,5 +1,5 @@
-* creare test per fizz e buzz (i nodi)
-* creare regola generica default
-* creare test per Node
-* implementare says function in TDD
-* implmentare game
+* creare test per fizz e buzz (i nodi) -- OK 
+* creare regola generica default -- OK 
+* creare test per Node -- OK
+* implementare says function in TDD -- OK
+* implmentare game -- DOING
