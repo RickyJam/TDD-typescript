@@ -16,4 +16,8 @@ describe('Game', () => {
         expect(game.says(66)).toBe('FIZZ');
     });
 
+    
+    it('says BUZZ when it match buzz rule', ()=> {
+        expect(game.says(55)).toBe('BUZZ');
+    });
 });
