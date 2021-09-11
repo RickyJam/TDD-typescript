@@ -7,10 +7,6 @@ describe('Node', () => {
     const fizz = new Fizz();
     const generic = new Generic();
 
-    beforeAll(() => {
-
-    });
-
     it('return value if rule is valid', () => {
         const node = new Node(undefined, generic);
 
@@ -21,6 +17,13 @@ describe('Node', () => {
         const node = new Node(undefined, fizz);
 
         expect(node.apply(3)).toBe("FIZZ");
+    });
+
+    it('return second node value if first is not valid', ()=> {
+        const secondNode = new Node(undefined, generic);
+        const firstNode = new Node(secondNode, fizz);
+
+        expect(firstNode.apply(1)).toBe("1");
     });
 
 });
