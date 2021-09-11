@@ -8,12 +8,12 @@ describe('Game', () => {
     const firstNode = new Node(secondNode, new Buzz());
     const game = new Game(firstNode);
 
-    it('says value when it does not match any specific rule', ()=> {
+    it('says value when it match only generic rule', ()=> {
         expect(game.says(94)).toBe('94');
     });
 
-    it('says value when it does not match any specific rule', ()=> {
-        expect(game.says(94)).toBe('94');
+    it('says FIZZ when it match fizz rule', ()=> {
+        expect(game.says(66)).toBe('FIZZ');
     });
 
 });
