@@ -1,4 +1,5 @@
 import Node from './node/Node';
+import Player from './player/Player';
 
 class Game {
 
@@ -8,8 +9,10 @@ class Game {
         this.entryNode = entryNode
     }
 
-    says(value: number): string {
-        return this.entryNode.apply(value);
+    play(counter): void {
+        for (let index = 0; index < counter; index++) {
+            Player.says(index, this.entryNode)
+        }
     }
 }
 
