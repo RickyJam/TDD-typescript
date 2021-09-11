@@ -1,6 +1,6 @@
 import Node from '../node/Node';
 
-class Player {
+export default class Player {
 
     private entryNode: Node
 
@@ -12,5 +12,3 @@ class Player {
         return this.entryNode.apply(value);
     }
 }
-
-export default Player;
