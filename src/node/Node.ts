@@ -9,30 +9,17 @@ class Node {
         this.nextNode = nextNode;
     }
 
-    private _evaluateRule(value: number): string {
-        const result = this.rule.handle(value);
-        if(result.isValid){
-            return result.value;
+    private _evaluateRule(currentValue: number): string {
+        const {isValid, value} = this.rule.handle(currentValue);
+        if(isValid){
+            return value;
         }
-        return this.nextNode.apply(value);
+        return this.nextNode.apply(currentValue);
     }
-        /*
-        if(this.hasNext()){
-            if(this.rule.check(value)){
-                return this.rule.value;
-            }
-            return this.nextNode.apply(value);
-        }
-        
-        return value.toString();
-    }*/
 
     apply(value: number): string {
         return this._evaluateRule(value)
     }
-
-    // private hasNext(): boolean {return this.nextNode !== undefined};
-
 }
 
 export default Node;
