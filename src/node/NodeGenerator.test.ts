@@ -4,10 +4,10 @@ import { Generic, Fizz, Buzz } from '../rules/RuleLibrary';
 
 describe('NodeGenerator', () => {
     
-    /*it('generateStandardNodes return a node', () => {
+    it('generateStandardNodes return a chain of three nodes', () => {
         let node: Node = NodeGenerator.generateStandardNodes();
-        expect(node).toBeDefined();
-    });*/
+        // come lo testo?
+    });
 
 
     it('GenericNode return a node with GenericRule', () => {

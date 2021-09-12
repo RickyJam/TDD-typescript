@@ -8,10 +8,22 @@ const GenericNode = (nextNode: Node = undefined) => new Node(nextNode, new Gener
 class NodeGenerator {
 
     static generateStandardNodes(): Node {
-        return 
+        return this.chainer([
+            GenericNode(),
+            FizzNode(),
+            BuzzNode()
+        ])
     }
 
+    private static chainer(nodes: Array<Node>): Node {
+        let arrayLen = nodes.length;
+        if(arrayLen <= 1)
+            return nodes[0];
+        
+        nodes[arrayLen - 1].chain(nodes[arrayLen - 2]);
 
+        return this.chainer(nodes.slice(-1));
+    }
 }
 
 export default NodeGenerator;

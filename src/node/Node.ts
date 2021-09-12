@@ -17,6 +17,10 @@ class Node {
         return this.nextNode.apply(currentValue);
     }
 
+    chain(node: Node): void{
+        this.nextNode = node
+    }
+
     apply(value: number): string {
         return this.evaluateRule(value)
     }
