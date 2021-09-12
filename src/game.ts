@@ -1,16 +1,15 @@
-import Node from './node/Node';
 import Player from './player/Player';
 
 class Game {
 
     private player: Player
 
-    constructor(entryNode: Node){
-        this.player = new Player(entryNode);
+    constructor(player: Player){
+        this.player = player
     }
-
+s
     play(counter: number): void {
-        for (let index = 0; index < counter; index++) {
+        for (let index = 1; index <= counter; index++) {
             this.player.says(index)
         }
     }
